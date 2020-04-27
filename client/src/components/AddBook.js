@@ -5,11 +5,10 @@ import { GET_AUTHOR_QUERY, ADD_BOOK_MUTATION, GET_BOOKS_QUERY } from "../queries
 
 const AddBook = () =>{
   const { loading, data } = useQuery(GET_AUTHOR_QUERY, {
-    variables: { language: 'english' },
   })
 
 
-  const [state, setState] = React.useState({name: 'x', genre: '', authorId: ''})
+  const [state, setState] = React.useState({name: '', genre: '', authorId: ''})
 
   const [addBook] = useMutation(ADD_BOOK_MUTATION);
 
